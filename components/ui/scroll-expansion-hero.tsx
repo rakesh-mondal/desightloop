@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, type ReactNode, type TouchEvent, type WheelEvent } from "react"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { AnimatedGradientHero } from "@/components/ui/animated-gradient"
 
 interface ScrollExpandMediaProps {
   mediaType?: "video" | "image"
@@ -147,19 +148,24 @@ const ScrollExpandMedia = ({
             animate={{ opacity: 1 - scrollProgress }}
             transition={{ duration: 0.1 }}
           >
+            {/* Animated Gradient Background */}
+            <div className="absolute inset-0 z-0">
+              <AnimatedGradientHero />
+            </div>
+            {/* Background Image Overlay (optional, can be removed if you want only gradient) */}
             <Image
               src={bgImageSrc || "/placeholder.svg"}
               alt="Background"
               width={1920}
               height={1080}
-              className="w-screen h-screen"
+              className="w-screen h-screen opacity-30"
               style={{
                 objectFit: "cover",
                 objectPosition: "center",
               }}
               priority
             />
-            <div className="absolute inset-0 bg-black/10" />
+            <div className="absolute inset-0 bg-black/5" />
           </motion.div>
 
           <div className="container mx-auto flex flex-col items-center justify-start relative z-10">

@@ -11,16 +11,16 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Esimaa Tech Solutions LLP — AI & Computer Vision",
+  title: "Delightloop All-in-One Gifting Platform for Autonomous Growth Marketing",
   description:
-    "Esimaa Tech Solutions LLP builds practical, scalable AI and Computer Vision solutions for education, surveying, automation and infrastructure.",
+    "All-in-One B2B Growth Marketing Gifting Platform to generate more leads, Close Deals Faster and Reduce Churn by building meaningful relationships with your prospects & customers",
   generator: "v0.app",
   openGraph: {
-    title: "Esimaa Tech Solutions LLP — AI & Computer Vision",
+    title: "Delightloop All-in-One Gifting Platform for Autonomous Growth Marketing",
     description:
-      "Made-in-India AI ecosystem: Udaan (surveying), Parishodh (education), Ram Setu (computer vision for automation).",
+      "All-in-One B2B Growth Marketing Gifting Platform to generate more leads, Close Deals Faster and Reduce Churn by building meaningful relationships with your prospects & customers",
     type: "website",
-    url: "https://www.esimaa.com/",
+    url: "https://www.delightloop.com/",
   },
 }
 
