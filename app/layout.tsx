@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Poppins } from "next/font/google"
+import Script from "next/script"
 import "./globals.css"
 
 const poppins = Poppins({ 
@@ -32,6 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} font-sans antialiased`}>
+        <Script
+          defer
+          src="https://script.superagi.com/public/script?id=0pJR5KGQmv-ad2481b1"
+          strategy="afterInteractive"
+        />
         {children}
         {/* Analytics component removed due to error */}
       </body>
