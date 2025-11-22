@@ -1,0 +1,28 @@
+.scroll-stack-scroller {
+  position: relative;
+  width: 100%;
+}
+
+.scroll-stack-inner {
+  position: relative;
+}
+
+/* Optimized CSS to prevent flickering with GPU acceleration */
+.scroll-stack-card {
+  position: relative;
+  width: 100%;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  contain: layout style paint;
+  isolation: isolate;
+}
+
+.scroll-stack-end {
+  height: 10vh;
+  pointer-events: none;
+}
