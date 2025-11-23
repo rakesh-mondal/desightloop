@@ -194,13 +194,13 @@ const Feature108 = ({
     <section className="w-full pt-4 pb-32 relative">
       <div className="container mx-auto px-4">
         <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
-          <div className="flex flex-col items-center w-full mb-4 pt-8 md:pt-12">
-            <TabsList className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-4 !bg-transparent border-0 shadow-none">
+          <div className="flex flex-col items-center w-full mb-6 md:mb-4 pt-8 md:pt-12">
+            <TabsList className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-4 !bg-transparent border-0 shadow-none w-full">
             {tabs.map((tab) => (
               <TabsTrigger
                 key={tab.value}
                 value={tab.value}
-                className="relative flex items-center justify-center gap-2 rounded-xl px-6 py-5 text-sm font-semibold text-muted-foreground data-[state=active]:text-primary data-[state=active]:bg-transparent bg-transparent hover:bg-transparent whitespace-nowrap min-h-[48px]"
+                className="relative flex items-center justify-center gap-2 rounded-xl px-4 py-4 sm:px-6 sm:py-5 text-[17.5px] font-semibold text-muted-foreground data-[state=active]:text-primary data-[state=active]:bg-transparent bg-transparent hover:bg-transparent whitespace-nowrap min-h-[48px] w-full sm:w-auto"
               >
                 <span className="flex items-center gap-2">
                   {tab.icon} {tab.label}
@@ -220,19 +220,19 @@ const Feature108 = ({
           </div>
           <div 
             ref={contentContainerRef}
-            className="mx-auto mt-4 max-w-screen-xl rounded-2xl bg-muted/70 p-6 lg:p-16 relative overflow-hidden"
+            className="mx-auto mt-6 md:mt-4 max-w-screen-xl rounded-2xl bg-muted/70 p-6 lg:p-16 relative overflow-hidden"
             style={{ minHeight: '600px' }}
           >
             {tabs.map((tab) => (
               <div
                 key={tab.value}
-                className={`grid place-items-center gap-20 lg:grid-cols-2 lg:gap-10 transition-opacity duration-500 ease-in-out ${
+                className={`grid place-items-center gap-8 md:gap-20 lg:grid-cols-2 lg:gap-10 transition-opacity duration-500 ease-in-out ${
                   activeTab === tab.value 
                     ? 'opacity-100 relative z-10' 
                     : 'opacity-0 absolute inset-0 pointer-events-none z-0'
                 }`}
               >
-                <div className="flex flex-col gap-5 w-full">
+                <div className="flex flex-col gap-4 md:gap-5 w-full">
                   {tab.content.badge && (
                     <Badge variant="outline" className="w-fit bg-background">
                       {tab.content.badge}

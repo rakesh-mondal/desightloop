@@ -66,7 +66,7 @@ export const Timeline = ({ data, heading = "Changelog from my journey", descript
                 <div className="h-10 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center shrink-0 absolute left-0 z-10">
                   <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700" />
                 </div>
-                <h3 className="text-xl md:text-5xl font-bold text-neutral-500 dark:text-neutral-500 pl-14 md:pl-14">
+                <h3 className="text-xl md:text-5xl font-bold text-black dark:text-black pl-14 md:pl-14">
                   {item.title}
                 </h3>
               </div>
