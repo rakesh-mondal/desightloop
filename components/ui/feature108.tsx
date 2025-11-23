@@ -82,9 +82,7 @@ const Feature108 = ({
       content: {
         title: (
           <>
-            <span className="text-[#5716EF]">Find & Engage Prospects</span>
-            <br />
-            <span className="text-[#5716EF]">with Relevant Gifts</span>
+            <span className="text-[#5716EF]">Find & Engage Prospects with Relevant Gifts</span>
             <br />
             <span className="text-black">instead of Digital Spam!</span>
           </>
@@ -141,8 +139,10 @@ const Feature108 = ({
 }: Feature108Props) => {
   const [activeTab, setActiveTab] = useState(tabs[0].value)
   const [progress, setProgress] = useState(0)
+  const [fadeKey, setFadeKey] = useState(0) // For fade animation
   const progressRef = useRef(0)
   const activeTabRef = useRef(tabs[0].value)
+  const contentContainerRef = useRef<HTMLDivElement>(null)
   const ROTATION_INTERVAL = 5000 // 5 seconds (medium time gap)
 
   // Update refs when state changes
@@ -177,10 +177,18 @@ const Feature108 = ({
 
   // Reset progress when tab changes manually
   const handleTabChange = (value: string) => {
+    setFadeKey((prev) => prev + 1) // Trigger fade animation
     setActiveTab(value)
     setProgress(0)
     progressRef.current = 0
   }
+
+  // Update fade key when auto-rotating
+  useEffect(() => {
+    if (activeTab !== activeTabRef.current) {
+      setFadeKey((prev) => prev + 1)
+    }
+  }, [activeTab])
 
   return (
     <section className="w-full pt-4 pb-32 relative">
@@ -210,14 +218,21 @@ const Feature108 = ({
             ))}
             </TabsList>
           </div>
-          <div className="mx-auto mt-4 max-w-screen-xl rounded-2xl bg-muted/70 p-6 lg:p-16">
+          <div 
+            ref={contentContainerRef}
+            className="mx-auto mt-4 max-w-screen-xl rounded-2xl bg-muted/70 p-6 lg:p-16 relative overflow-hidden"
+            style={{ minHeight: '600px' }}
+          >
             {tabs.map((tab) => (
-              <TabsContent
+              <div
                 key={tab.value}
-                value={tab.value}
-                className="grid place-items-center gap-20 lg:grid-cols-2 lg:gap-10"
+                className={`grid place-items-center gap-20 lg:grid-cols-2 lg:gap-10 transition-opacity duration-500 ease-in-out ${
+                  activeTab === tab.value 
+                    ? 'opacity-100 relative z-10' 
+                    : 'opacity-0 absolute inset-0 pointer-events-none z-0'
+                }`}
               >
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-5 w-full">
                   {tab.content.badge && (
                     <Badge variant="outline" className="w-fit bg-background">
                       {tab.content.badge}
@@ -250,7 +265,7 @@ const Feature108 = ({
                   alt={tab.content.imageAlt}
                   className="rounded-xl w-full h-auto object-cover"
                 />
-              </TabsContent>
+              </div>
             ))}
           </div>
         </Tabs>

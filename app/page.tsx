@@ -8,6 +8,8 @@ import { GTMSuccess } from "@/components/gtm-success"
 import { Feature108 } from "@/components/ui/feature108"
 import { AnimatedGradientBackground } from "@/components/ui/animated-gradient-background"
 import { TeamRoles } from "@/components/team-roles"
+import { DelightLoopTimeline } from "@/components/delightloop-timeline"
+import { DelightLoopFeatureSteps } from "@/components/delightloop-feature-steps"
 
 export default function Home() {
   return (
@@ -33,6 +35,8 @@ export default function Home() {
           </div>
         </div>
         <TeamRoles />
+        <DelightLoopTimeline />
+        <DelightLoopFeatureSteps />
         <Partner />
       </main>
       <Footer />

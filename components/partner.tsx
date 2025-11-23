@@ -8,7 +8,7 @@ export function Partner() {
       className="relative border-t border-border bg-[#5716EF] py-16 md:py-20 lg:py-24 overflow-hidden"
     >
       {/* Retro Grid Background */}
-      <RetroGrid className="!opacity-70 z-0" angle={65} />
+      <RetroGrid className="!opacity-42 z-0" angle={65} />
       
       <div className="container mx-auto max-w-4xl px-4 md:px-6 text-center relative z-10">
         <h2 className="mb-4 md:mb-6 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white leading-tight">

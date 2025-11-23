@@ -48,13 +48,13 @@ const Carousel = React.forwardRef<
 >(
   (
     {
-      orientation = 'horizontal',
-      opts,
-      setApi,
-      plugins,
-      className,
-      children,
-      ...props
+  orientation = 'horizontal',
+  opts,
+  setApi,
+  plugins,
+  className,
+  children,
+  ...props
     },
     ref,
   ) => {
