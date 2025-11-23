@@ -1,18 +1,9 @@
 "use client"
 
-import { AnimatedGradientBackground } from "@/components/ui/animated-gradient-background"
-
 export function GTMSuccess() {
   return (
-    <section className="w-full py-16 md:py-20 lg:py-24 relative overflow-hidden">
-      {/* Animated Gradient Background */}
-      <AnimatedGradientBackground
-        fromColor="rgba(255, 255, 255, 1)"
-        toColor="rgba(87, 22, 239, 0.15)"
-        position="top"
-      />
-      
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+    <section className="w-full pt-16 md:pt-20 lg:pt-24 pb-0">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center text-center space-y-4 md:space-y-6">
           {/* Main Headline */}
           <h2 className="text-lg font-light text-pretty lg:text-3xl text-center w-full text-gray-900">
@@ -27,7 +18,7 @@ export function GTMSuccess() {
           </div>
 
           {/* KPIs Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 w-full max-w-5xl mx-auto mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[10px] w-full max-w-5xl mx-auto mt-12">
             {/* KPI 1 */}
             <div className="flex flex-col items-center space-y-2">
               <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#5716EF]">
