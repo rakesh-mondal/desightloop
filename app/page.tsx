@@ -7,6 +7,7 @@ import { TextRotateSection } from "@/components/text-rotate-section"
 import { GTMSuccess } from "@/components/gtm-success"
 import { Feature108 } from "@/components/ui/feature108"
 import { AnimatedGradientBackground } from "@/components/ui/animated-gradient-background"
+import { TeamRoles } from "@/components/team-roles"
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
             <Feature108 />
           </div>
         </div>
+        <TeamRoles />
         <Partner />
       </main>
       <Footer />

@@ -74,6 +74,8 @@ export function Header() {
           </div>
         </nav>
       </div>
+      {/* Multi-color gradient border */}
+      <div className="h-[2px] w-full bg-gradient-to-r from-[#A8B5FF] via-[#C4A8FF] via-[#A8B5FF] via-[#FFA8B5] to-[#A8FFC4]"></div>
     </header>
   )
 }

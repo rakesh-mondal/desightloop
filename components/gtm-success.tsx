@@ -6,7 +6,7 @@ export function GTMSuccess() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center text-center space-y-4 md:space-y-6">
           {/* Main Headline */}
-          <h2 className="text-lg font-light text-pretty lg:text-3xl text-center w-full text-gray-900">
+          <h2 className="text-lg font-semibold text-pretty lg:text-3xl text-center w-full text-gray-900">
             Guarantee your GTM Success
           </h2>
           
