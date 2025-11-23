@@ -25,6 +25,7 @@ export function Header() {
                   fill="none"
                   role="img"
                   aria-label="Esimaa logo"
+                  className="w-32 sm:w-40 md:w-[168px] h-auto"
                 >
               <path
                 fill="url(#a)"

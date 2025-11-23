@@ -11,12 +11,12 @@ export function Partner() {
       <RetroGrid className="!opacity-42 z-0" angle={65} />
       
       <div className="container mx-auto max-w-4xl px-4 md:px-6 text-center relative z-10">
-        <h2 className="mb-4 md:mb-6 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white leading-tight">
+        <h2 className="mb-4 md:mb-6 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white leading-tight px-2">
           Revolutionize your Gifting with
           <br />
           <span className="text-white">Delightloop</span>
         </h2>
-        <p className="mb-8 md:mb-10 text-base md:text-lg lg:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
+        <p className="mb-6 sm:mb-8 md:mb-10 text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto px-2">
           Book a call with our team to see how Delightloop can help
         </p>
         <div className="flex justify-center">

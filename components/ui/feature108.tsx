@@ -195,12 +195,12 @@ const Feature108 = ({
       <div className="container mx-auto px-4">
         <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
           <div className="flex flex-col items-center w-full mb-6 md:mb-4 pt-8 md:pt-12">
-            <TabsList className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-4 !bg-transparent border-0 shadow-none w-full">
+            <TabsList className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-3 md:gap-4 !bg-transparent border-0 shadow-none w-full sm:w-auto">
             {tabs.map((tab) => (
               <TabsTrigger
                 key={tab.value}
                 value={tab.value}
-                className="relative flex items-center justify-center gap-2 rounded-xl px-4 py-4 sm:px-6 sm:py-5 text-[17.5px] font-semibold text-muted-foreground data-[state=active]:text-primary data-[state=active]:bg-transparent bg-transparent hover:bg-transparent whitespace-nowrap min-h-[48px] w-full sm:w-auto"
+                className="relative flex items-center justify-center gap-1.5 sm:gap-2 rounded-xl px-3 py-3 sm:px-5 sm:py-4 md:px-6 md:py-5 text-sm sm:text-base md:text-[17.5px] font-semibold text-muted-foreground data-[state=active]:text-primary data-[state=active]:bg-transparent bg-transparent hover:bg-transparent whitespace-nowrap min-h-[44px] sm:min-h-[48px] w-full sm:w-auto"
               >
                 <span className="flex items-center gap-2">
                   {tab.icon} {tab.label}
@@ -220,8 +220,8 @@ const Feature108 = ({
           </div>
           <div 
             ref={contentContainerRef}
-            className="mx-auto mt-6 md:mt-4 max-w-screen-xl rounded-2xl bg-muted/70 p-6 lg:p-16 relative overflow-hidden"
-            style={{ minHeight: '600px' }}
+            className="mx-auto mt-6 md:mt-4 max-w-screen-xl rounded-2xl bg-muted/70 p-4 sm:p-6 lg:p-16 relative overflow-hidden"
+            style={{ minHeight: 'auto' }}
           >
             {tabs.map((tab) => (
               <div
@@ -238,18 +238,18 @@ const Feature108 = ({
                       {tab.content.badge}
                     </Badge>
                   )}
-                  <h3 className="text-[28px] font-semibold leading-tight">
+                  <h3 className="text-xl sm:text-2xl md:text-[28px] font-semibold leading-tight">
                     {tab.content.title}
                   </h3>
-                  <p className="text-muted-foreground text-base">
+                  <p className="text-muted-foreground text-sm sm:text-base">
                     {tab.content.description}
                   </p>
                   {tab.content.benefits && (
-                    <div className="flex flex-col gap-3 mt-2">
+                    <div className="flex flex-col gap-2 sm:gap-3 mt-2">
                       {tab.content.benefits.map((benefit, index) => (
                         <div key={index} className="flex items-center gap-2">
-                          <Check className="h-5 w-5 text-[#5716EF] shrink-0" />
-                          <span className="text-base">{benefit}</span>
+                          <Check className="h-4 w-4 sm:h-5 sm:w-5 text-[#5716EF] shrink-0" />
+                          <span className="text-sm sm:text-base">{benefit}</span>
                         </div>
                       ))}
                     </div>
@@ -263,7 +263,7 @@ const Feature108 = ({
                 <img
                   src={tab.content.imageSrc}
                   alt={tab.content.imageAlt}
-                  className="rounded-xl w-full h-auto object-cover"
+                  className="rounded-xl w-full h-auto object-cover max-w-full"
                 />
               </div>
             ))}

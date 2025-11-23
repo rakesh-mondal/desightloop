@@ -106,11 +106,11 @@ export function FeatureSteps({
           <div className="order-2 md:order-1 space-y-8">
             {title && (
               <>
-                <h2 className="text-lg font-semibold text-pretty lg:text-3xl text-left w-full text-gray-900 mb-4">
+                <h2 className="text-lg font-semibold text-pretty md:text-2xl lg:text-3xl text-left w-full text-gray-900 mb-4">
                   {title}
                 </h2>
                 {description && (
-                  <p className="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed mb-8">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8">
                     {description}
                   </p>
                 )}
@@ -138,11 +138,11 @@ export function FeatureSteps({
                 )}
 
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold">
+                  <h3 className="text-base sm:text-lg font-semibold">
                     {feature.title || feature.step}
                   </h3>
                   {index === currentFeature && (
-                    <p className="text-base text-muted-foreground">
+                    <p className="text-sm sm:text-base text-muted-foreground mt-1">
                       {feature.content}
                     </p>
                   )}
@@ -153,7 +153,7 @@ export function FeatureSteps({
 
           <div
             className={cn(
-              "order-1 md:order-2 relative h-[200px] md:h-[300px] lg:h-[400px] overflow-hidden rounded-lg"
+              "order-1 md:order-2 relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden rounded-lg"
             )}
           >
             <AnimatePresence mode="wait">

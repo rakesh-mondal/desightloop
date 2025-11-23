@@ -82,7 +82,7 @@ export function ReversedFeatureSection({
       <div className="max-w-7xl mx-auto w-full">
         <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-10 items-center">
           {/* Image on Left */}
-          <div className="order-1 md:order-1 relative h-[200px] md:h-[300px] lg:h-[400px] w-full overflow-hidden rounded-lg">
+          <div className="order-1 md:order-1 relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] w-full overflow-hidden rounded-lg">
             <AnimatePresence mode="wait">
               {features.map(
                 (feature, index) =>
@@ -110,12 +110,12 @@ export function ReversedFeatureSection({
           </div>
 
           {/* Text Content on Right */}
-          <div className="order-2 md:order-2 space-y-8">
-            <div className="space-y-6">
-              <h2 className="text-lg font-semibold text-pretty lg:text-3xl text-left w-full text-gray-900">
+          <div className="order-2 md:order-2 space-y-6 md:space-y-8">
+            <div className="space-y-4 md:space-y-6">
+              <h2 className="text-lg font-semibold text-pretty md:text-2xl lg:text-3xl text-left w-full text-gray-900">
                 {title}
               </h2>
-              <p className="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed">
                 {description}
               </p>
             </div>
@@ -141,11 +141,11 @@ export function ReversedFeatureSection({
                 )}
 
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold">
+                  <h3 className="text-base sm:text-lg font-semibold">
                     {feature.title || feature.step}
                   </h3>
                   {index === currentFeature && (
-                    <p className="text-base text-muted-foreground">
+                    <p className="text-sm sm:text-base text-muted-foreground mt-1">
                       {feature.content}
                     </p>
                   )}

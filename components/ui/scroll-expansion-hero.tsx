@@ -285,7 +285,7 @@ const ScrollExpandMedia = ({
                 }`}
               >
                 <motion.h2
-                  className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white transition-none"
+                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-white transition-none"
                   style={{
                     transform: `translateX(-${textTranslateX}vw)`,
                     textShadow: "0 4px 12px rgba(0, 0, 0, 0.6)",
@@ -294,7 +294,7 @@ const ScrollExpandMedia = ({
                   {firstWord}
                 </motion.h2>
                 <motion.h2
-                  className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center text-white transition-none"
+                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-center text-white transition-none"
                   style={{
                     transform: `translateX(${textTranslateX}vw)`,
                     textShadow: "0 4px 12px rgba(0, 0, 0, 0.6)",

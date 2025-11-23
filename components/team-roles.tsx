@@ -94,11 +94,11 @@ export function TeamRoles() {
         </div>
 
         {/* Role Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto">
           {roles.map((role, index) => {
             const Icon = role.icon
             return (
-              <Card key={index} className="bg-white border border-[#5716EF] rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <Card key={index} className="bg-white border border-[#5716EF] rounded-lg p-4 sm:p-6 hover:shadow-lg transition-shadow">
                 <div className="flex flex-col h-full">
                   {/* Icon and Title in same row, left-aligned, top-aligned */}
                   <div className="flex items-start gap-3 mb-4">

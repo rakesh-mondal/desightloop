@@ -18,33 +18,33 @@ export function GTMSuccess() {
           </div>
 
           {/* KPIs Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-[10px] w-full max-w-5xl mx-auto mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-[10px] w-full max-w-5xl mx-auto mt-8 sm:mt-12">
             {/* KPI 1 */}
             <div className="flex flex-col items-center space-y-2">
-              <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#5716EF]">
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#5716EF]">
                 4X
               </div>
-              <p className="text-base md:text-lg text-gray-700 font-medium">
+              <p className="text-sm sm:text-base md:text-lg text-gray-700 font-medium text-center">
                 Qualified Pipeline
               </p>
             </div>
 
             {/* KPI 2 */}
             <div className="flex flex-col items-center space-y-2">
-              <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#5716EF]">
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#5716EF]">
                 2X
               </div>
-              <p className="text-base md:text-lg text-gray-700 font-medium">
+              <p className="text-sm sm:text-base md:text-lg text-gray-700 font-medium text-center">
                 Deals Closed
               </p>
             </div>
 
             {/* KPI 3 */}
             <div className="flex flex-col items-center space-y-2">
-              <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#5716EF]">
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#5716EF]">
                 10%
               </div>
-              <p className="text-base md:text-lg text-gray-700 font-medium">
+              <p className="text-sm sm:text-base md:text-lg text-gray-700 font-medium text-center">
                 Churn Reduction
               </p>
             </div>

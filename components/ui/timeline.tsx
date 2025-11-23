@@ -47,10 +47,10 @@ export const Timeline = ({ data, heading = "Changelog from my journey", descript
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto pt-20 pb-4 md:pb-6 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
+        <h2 className="text-lg md:text-2xl lg:text-3xl xl:text-4xl mb-4 text-black dark:text-white max-w-4xl">
           {heading}
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
+        <p className="text-neutral-700 dark:text-neutral-300 text-sm sm:text-base md:text-base max-w-sm">
           {description}
         </p>
       </div>
@@ -66,7 +66,7 @@ export const Timeline = ({ data, heading = "Changelog from my journey", descript
                 <div className="h-10 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center shrink-0 absolute left-0 z-10">
                   <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700" />
                 </div>
-                <h3 className="text-xl md:text-5xl font-bold text-black dark:text-black pl-14 md:pl-14">
+                <h3 className="text-xl md:text-3xl lg:text-5xl font-bold text-black dark:text-black pl-14 md:pl-14">
                   {item.title}
                 </h3>
               </div>
