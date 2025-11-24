@@ -215,7 +215,6 @@ const ScrollExpandMedia = ({
                         src={mediaSrc}
                         poster={posterSrc}
                         autoPlay
-                        muted
                         loop
                         playsInline
                         preload="auto"
